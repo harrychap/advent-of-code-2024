@@ -1,20 +1,25 @@
 package tasks
 
 import utils.readInput
+import kotlin.math.absoluteValue
 
 object Task02 : Task {
-    private fun List<Int>.isAllZero() = this.any { it == 0 }
-    private fun List<Int>.anyAboveThree() = this.any { it > 3 }
-    private fun List<Int>.anyBelowThree() = this.any {  it < 3 }
-    private fun List<Int>.allAboveOrBelowZero() = (this.all { it > 0 } || this.all { it < 0 })
 
     override fun partA(): Int =
-        parseInput().map { report -> report.windowed(2).map { window -> (window.first() - window.last()) } }
-            .count { report ->
-                !report.any { it == 0 } && !report.any { it > 3 } && !report.any { it < -3 } && (report.all { it > 0 } || report.all { it < 0 })
-            }
+        parseInput().count {
+            (it == it.sortedDescending() || it == it.sorted()) && it.zipWithNext()
+                .map { pair -> (pair.second - pair.first).absoluteValue }.all { num -> num in 1..3 }
+        }
 
-    override fun partB(): Int = 0
+
+    override fun partB(): Int {
+        return parseInput().count {
+            List(it.size) { index1 -> it.filterIndexed { index2, _ -> index1 != index2 } }.any { report ->
+                (report == report.sortedDescending() || report == report.sorted()) && report.zipWithNext()
+                    .map { pair -> (pair.second - pair.first).absoluteValue }.all { num -> num in 1..3 }
+            }
+        }
+    }
 
 
     private fun parseInput() =
