@@ -28,11 +28,11 @@ object Task05 : Task {
 
     private fun List<Int>.relevantRules() = rules.filter { this.contains(it.first) && this.contains(it.second) }
 
-    private fun List<Int>.isValidRow(): Boolean = this.all {
-        this.relevantRules().all { rule ->
+    private fun List<Int>.isValidRow(): Boolean = this.relevantRules()
+        .all { rule ->
             this.indexOf(rule.first) < this.indexOf(rule.second)
         }
-    }
+
 
     private fun parseInput() =
         readInput("task05.txt").split("\n\n").last().split("\n").map { it.split(',').map { it.toInt() } }
