@@ -28,6 +28,12 @@ fun main() {
 
     println("TASK 6")
     println(Task06.partA())
-    println(Task06.partB())
+//    TODO: This is too slow
+//    println(Task06.partB())
+    println("")
+
+    println("TASK 7")
+    println(Task07.partA())
+    println(Task07.partB())
     println("")
 }
