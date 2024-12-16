@@ -32,8 +32,19 @@ fun main() {
 //    println(Task06.partB())
     println("")
 
-    println("TASK 7")
-    println(Task07.partA())
-    println(Task07.partB())
+//    println("TASK 7")
+//    println(Task07.partA())
+////    TODO: This is wrong
+////    println(Task07.partB())
+//    println("")
+
+    println("TASK 8")
+    println(Task08.partA())
+    println(Task08.partB())
+    println("")
+
+    println("TASK 9")
+    println(Task09.partA())
+    println(Task09.partB())
     println("")
 }
