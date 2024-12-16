@@ -90,7 +90,7 @@ object Task06 : Task {
         else -> this
     }
 
-    data class Point(val x: Int, val y: Int, val char: Char)
+    private data class Point(val x: Int, val y: Int, val char: Char)
 
     private fun parseInput() =
         readInput("task06.txt").split("\n").flatMapIndexed { y, row ->

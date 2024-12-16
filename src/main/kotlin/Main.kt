@@ -43,8 +43,13 @@ fun main() {
     println(Task08.partB())
     println("")
 
-    println("TASK 9")
-    println(Task09.partA())
-    println(Task09.partB())
+//    println("TASK 9")
+//    println(Task09.partA())
+//    println(Task09.partB())
+//    println("")
+
+    println("TASK 10")
+    println(Task10.partA())
+    println(Task10.partB())
     println("")
 }
