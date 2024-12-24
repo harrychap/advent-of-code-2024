@@ -53,6 +53,11 @@ fun main() {
     println(Task10.partB())
     println("")
 
+    println("TASK 11")
+    println(Task11.partA())
+    println(Task11.partB())
+    println("")
+
     println("TASK 19")
     println(Task19.partA())
     println(Task19.partB())
