@@ -52,4 +52,9 @@ fun main() {
     println(Task10.partA())
     println(Task10.partB())
     println("")
+
+    println("TASK 19")
+    println(Task19.partA())
+    println(Task19.partB())
+    println("")
 }
